@@ -3,12 +3,13 @@
 
 class Application {
     String inputFileName
-    String outputFileName
     FileIO myFile
-    nameList: String List
-    NameManager nameSet
+    String[] fileContents
+    RecordParser myParser
+    String[][] myTable
     main()
     readList()
+    printTable()
 }
 
 class FileIO {
@@ -19,14 +20,12 @@ class FileIO {
     +writeToFile()
 }
 
-class NameManager {
-    -nameList: String List
-    +getNames()
-    +setNames()
-    +sortAlpha()
+class RecordParser {
+    -String[] recordsList
+    -String[][] recordsTable
+    +RecordParser()
+    +fillTable()
+    +getTable()
 }
-
-Application <-> FileIO
-Application <--> NameManager
 
 @enduml

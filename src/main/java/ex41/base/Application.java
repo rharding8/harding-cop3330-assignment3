@@ -10,8 +10,7 @@ public class Application {
     /* Create Strings holding file names
     * Create instances of the FileIO Class "myFile" and NameManager Class "nameSet"
     *   Use inputString as parameter for myFile's constructor
-    * Call readFromFile in FileIO
-    *   Declare and Set String[] "nameList" to the output of above
+    * Declare and Set String[] "nameList" to the output of call to readList
     * Call setNames from NameManager
     *   Give input of the nameList
     * Call sortAlpha from NameManager
@@ -22,24 +21,32 @@ public class Application {
     * Call closeInput from FileIO
     */
 
+    Application app = new Application();
     String inputString = "./src/main/java/ex41/base/exercise41_input.txt";
     String outputString = "./src/main/java/ex41/base/exercise41_output.txt";
-    FileIO myFile = new FileIO(inputString);
+    FileIO myFile = new FileIO();
+    myFile.setInputFile(inputString);
     NameManager nameSet = new NameManager();
-    String[] nameList = new String[0];
-    try {
-      nameList = myFile.readFromFile();
-    } catch (FileNotFoundException e) {
-      e.printStackTrace();
-    }
+    String[] nameList = app.readList(myFile);
     nameSet.setNames(nameList);
     nameSet.sortAlpha();
     nameList = nameSet.getNames();
     try {
-      myFile.writeToFile(outputString, nameList);
+      myFile.writeToFile("Total of " + nameList.length + " names", outputString, nameList);
     } catch (IOException e) {
       e.printStackTrace();
     }
     myFile.closeInput();
+  }
+
+  public String[] readList(FileIO myFile) {
+    // Call readFromFile in FileIO
+    try {
+      return myFile.readFromFile();
+    }
+    catch (FileNotFoundException e) {
+      e.printStackTrace();
+      return new String[0];
+    }
   }
 }
