@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Application {
+    String workingDir
+    DirectoryIO myDir
+    +main()
+    +readName()
+    +readAuthor()
+    +makeJS()
+    +makeCSS()
+    +craftHTML()
+}
+
+class FileIO {
+    -File inputFile
+    +setInputFile()
+    +closeInput()
+    +readFromFile()
+    +writeToFile()
+}
+
+class DirectoryIO {
+    -String parentDir
+    +DirectoryIO()
+    +setParentDir()
+    +mkDir()
+    +writeToFile()
+}
+
+FileIO <|-- DirectoryIO
+
+@enduml
