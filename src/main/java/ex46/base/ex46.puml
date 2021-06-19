@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Application {
+    +main()
+    +wordHistogram()
+}
+
+class FileCounter {
+    -Map<String, Integer> counts
+    -File inputFile
+    +FileCounter()
+    +fillCounts()
+    +sortCounts()
+    +getCounts()
+}
+
+@enduml

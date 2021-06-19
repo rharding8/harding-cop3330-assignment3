@@ -21,6 +21,7 @@ public class Application {
     myFile.setInputFile(inputFileName);
     String[] records = app.readList(myFile);
     RecordParser myParser = new RecordParser(records);
+    myParser.fillTable();
     String[][] myTable = myParser.getTable();
     app.printTable(myTable, "Salary");
     myFile.closeInput();

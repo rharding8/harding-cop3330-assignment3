@@ -1,0 +1,1 @@
+This is a test file with only one line and no breaks whatsoever. Isn't that neat?
