@@ -2,11 +2,6 @@
 'https://plantuml.com/class-diagram
 
 class Application {
-    String inputFileName
-    FileIO myFile
-    String[] fileContents
-    RecordParser myParser
-    String[][] myTable
     main()
     readList()
     printTable()

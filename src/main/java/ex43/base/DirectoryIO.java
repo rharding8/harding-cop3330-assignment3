@@ -38,7 +38,7 @@ public class DirectoryIO extends FileIO {
      * if (file doesn't exist)
      *   Create File
      * Close outputFile
-     * Declare and Initialize FileWrite "writer" to file named outputFile
+     * Declare and Initialize FileWrite "writer" to outputFile
      * for (index 0 through length of fileContents)
      *   Write fileContents[index] to writer
      *   Add a line break every time

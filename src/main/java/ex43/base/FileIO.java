@@ -49,8 +49,7 @@ public class FileIO {
     /* Declare and Initialize File object "outputFile" to file named outFile
     * if (file doesn't exist)
     *   Create File
-    * Close outputFile
-    * Declare and Initialize FileWrite "writer" to file named outputFile
+    * Declare and Initialize FileWrite "writer" to outputFile
     * Write "Total of [length of fileContents] names" to writer
     * Write horizontal line to writer
     * for (index 0 through length of fileContents)

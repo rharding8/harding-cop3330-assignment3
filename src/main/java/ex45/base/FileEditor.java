@@ -45,7 +45,6 @@ public class FileEditor extends FileIO {
     /* Declare and Initialize File object "outputFile" to file named outFile
      * if (file doesn't exist)
      *   Create File
-     * Close outputFile
      * Declare and Initialize FileWrite "writer" to file named outputFile
      * for (index 0 through length of unsavedFile)
      *   Write unsavedFile to writer

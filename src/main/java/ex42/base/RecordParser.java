@@ -14,7 +14,6 @@ public class RecordParser {
 
   public RecordParser(String[] recordsList) {
     // Constructor: Set Instance recordsList to parameter
-    // Call fillTable
     this.recordsList = recordsList;
   }
 

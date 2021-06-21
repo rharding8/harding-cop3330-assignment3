@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Application {
+    Scanner input
+    main()
+    getName()
+    getInfo()
+}
+
+class JsonIO {
+    Map jsonFile
+    ArrayList jsonList
+    JsonIO()
+    fillJsonList()
+    findMap()
+}
+@enduml

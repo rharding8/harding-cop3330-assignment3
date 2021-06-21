@@ -1,0 +1,7 @@
+{
+  "filmmakers" : [
+    {"name": "Ridley Scott", "best film": "Alien", "worst film": "Robin Hood" },
+    {"name": "David Fincher", "best film": "Se7en", "worst film": "Alien 3" },
+    {"name": "Zack Snyder", "best film": "Watchmen", "worst film": "Sucker Punch" }
+  ]
+}

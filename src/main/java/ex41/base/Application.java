@@ -12,17 +12,17 @@ public class Application {
   // Used as the main hub from which all commands to the two other classes are run
 
   public static void main(String[] args) {
-    /* Create Strings holding file names
+    /* Instantiate Application as app
+    * Create Strings holding file names
     * Create instances of the FileIO Class "myFile" and NameManager Class "nameSet"
-    *   Use inputString as parameter for myFile's constructor
+    * Set inputFile in myFile to the inputString
     * Declare and Set String[] "nameList" to the output of call to readList
     * Call setNames from NameManager
     *   Give input of the nameList
     * Call sortAlpha from NameManager
     * Call getNames from NameManager
     *   Store in nameList
-    * Call writeToFile from FileIO
-    *   Input of nameList
+    * Call writeList in app using myFile, nameList, and outputString
     * Call closeInput from FileIO
     */
 
@@ -36,11 +36,7 @@ public class Application {
     nameSet.setNames(nameList);
     nameSet.sortAlpha();
     nameList = nameSet.getNames();
-    try {
-      myFile.writeToFile("Total of " + nameList.length + " names", outputString, nameList);
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
+    app.writeList(myFile, nameList,outputString);
     myFile.closeInput();
   }
 
@@ -52,6 +48,15 @@ public class Application {
     catch (FileNotFoundException e) {
       e.printStackTrace();
       return new String[0];
+    }
+  }
+
+  public void writeList(FileIO myFile, String[] nameList, String outputString) {
+    // Call writeToFile in FileIO
+    try {
+      myFile.writeToFile("Total of " + nameList.length + " names", outputString, nameList);
+    } catch (IOException e) {
+      e.printStackTrace();
     }
   }
 }

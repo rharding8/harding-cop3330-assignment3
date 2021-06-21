@@ -15,6 +15,7 @@ public class Application {
   Scanner input = new Scanner(System.in);
 
   public static void main(String[] args) {
+    // Instantiate Application as app
     // Declare String "workingDir" as path to the website directory
     // Declare String "webName" as output of a Call to readName()
     // Declare and Initialize Object of DirectoryIO "myDir" to the parent directory of workingDir

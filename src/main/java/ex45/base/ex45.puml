@@ -4,11 +4,10 @@
 class Application {
     Scanner input
     main()
-    readNewName()
+    readName()
 }
 
 class FileEditor {
-    -File inputFile
     -String dir
     -String[] unsavedFile
     +FileEditor()

@@ -17,7 +17,7 @@ public class Application {
   public static void main(String[] args) {
     // Instantiate Application as app
     // Set Strings to hold paths and input file name
-    // Call readName() and set to String
+    // Call readName() and set to String outputFile
     // Instantiate FileEditor as editor
     // Collect contents of inputFile into a String[]
     // set that String[] into editor

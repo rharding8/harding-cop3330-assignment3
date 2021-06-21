@@ -2,13 +2,9 @@
 'https://plantuml.com/class-diagram
 
 class Application {
-    String inputFileName
-    String outputFileName
-    FileIO myFile
-    nameList: String List
-    NameManager nameSet
     main()
     readList()
+    writeList()
 }
 
 class FileIO {
@@ -25,8 +21,5 @@ class NameManager {
     +setNames()
     +sortAlpha()
 }
-
-Application <-> FileIO
-Application <--> NameManager
 
 @enduml
